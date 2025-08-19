@@ -12,3 +12,12 @@ class EntryModel(models.Model):
 
     def __str__(self):
         return str(self.value) + " " + str(self.date) + " " + self.source + " " + str(self.borrowed)
+
+
+class TotalValues(models.Model):
+    user = models.CharField()
+    total = models.IntegerField()
+    thisMonth = models.IntegerField()
+
+    def __str__(self):
+        return str(self.user) + " " + str(self.total) + " " + str(self.thisMonth)

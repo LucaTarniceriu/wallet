@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>wallet</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block title %}Wallet{% endblock %}
+
+
+{% block content %}
     <h2>Welcome {{ username }}</h2>
-</body>
-</html>
+    <p> ----- left with: {{ leftWith }} -----</p>
+    <p> Total: {{ total }} RON</p>
+
+    <a href="{% url 'viewTransactions' %}">View transactions</a>
+    <a href="{% url 'addTransaction' %}">Add transaction</a>
+    <a href="{% url 'logout' %}">Logout</a>
+{% endblock %}

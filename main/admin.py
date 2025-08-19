@@ -1,6 +1,7 @@
 from django.contrib import admin
-from .models import EntryModel
+from .models import *
 
 # Register your models here.
 
 admin.site.register(EntryModel)
+admin.site.register(TotalValues)

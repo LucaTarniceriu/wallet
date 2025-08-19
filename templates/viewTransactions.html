@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Transactions{% endblock %}
+
+
+
+{% block content %}
+    <h1> Your transactions</h1>
+
+    {% for entry in transactions %}
+      <div id="entry">
+        <div id="value">{{ entry.value }} </div>
+        <div id="date">{{ entry.date|date:'d M Y' }} </div>
+        <div id="source">{{ entry.source }} </div>
+        <div id="borrowed">{% if entry.borrowed == True %}imprumut {% endif %}</div>
+      </div>
+    {% endfor %}
+{% endblock %}
