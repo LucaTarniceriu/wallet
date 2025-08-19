@@ -7,5 +7,6 @@ urlpatterns = [
     path("home", views.home, name="home"),
     path("viewTransactions", views.viewTransactions, name="viewTransactions"),
     path("addTransaction", views.addTransaction, name="addTransaction"),
+    path("processTransaction", views.processTransaction, name="processTransaction"),
     path("logout", views.logout, name="logout"),
 ]

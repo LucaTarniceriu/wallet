@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Add Transaction{% endblock %}
+
+{% block content %}
+    <form method="post" action="{% url 'processTransaction' %}">
+   {% csrf_token %}
+    {{ addForm }}
+        <input type="submit">
+    </form>
+    <button class="buttons" id="back_btn" onclick="history.back()">Back</button>
+{% endblock %}

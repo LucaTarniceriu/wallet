@@ -5,9 +5,10 @@ from django.db import models
 class EntryModel(models.Model):
     user = models.CharField()
     value = models.IntegerField()
-    date = models.DateField()
+    date = models.DateField(auto_now_add=True)
     source = models.CharField(max_length=100)
     borrowed = models.BooleanField()
+
 
 
     def __str__(self):
